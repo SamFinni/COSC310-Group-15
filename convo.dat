@@ -1,0 +1,24 @@
+.*
+Awesome!
+
+.thanks/thank you/thx
+You're welcome!
+
+?*
+I'm sorry, I didn't understand that.
+
+.hi/hello/hey
+Hi, nice to meet you! My name's Charles. What's your name?^name
+I like that name, $name!
+So tell me $name, what do you like to do?^like
+You like to $like huh? That's pretty neat. What do you like most about it?
+I see, that does sound enjoyable!
+
+?like/enjoy&do/doing
+I like talking to people like you!
+
+?why&like
+Mainly because it's the only thing I know how to do, I suppose. But I especially like talking to you!
+
+?do&you&like
+Yeah, I think I do like that!
