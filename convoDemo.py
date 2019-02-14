@@ -8,6 +8,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 
 convoFile = open("convo.dat", "r")
 topic = 0
+seq = 0
 saveAnswer = False
 lastAnswer = ""
 lastType = ""
@@ -28,7 +29,6 @@ def lemma(word):
 def findAnswer(uIn, wordType):
 	with open('sent_tokenizer.pickle', 'rb') as f:
 		tokenizer = pickle.load(f)
-
 
 	if len(uIn.split(' ')) == 1:
 		return lemma(uIn)
@@ -57,7 +57,7 @@ def findAnswer(uIn, wordType):
 		if matches == 1:
 			for i in range(0, len(tagged)):
 				if tagged[i][1] == wordType:
-					answer = lemma(tagged[i][1])
+					answer = lemma(tagged[i][0])
 					if "NN" not in tagged[i][1]:
 						answer = answer.lower()
 		elif worseMatches == 1:
@@ -73,10 +73,17 @@ def findAnswer(uIn, wordType):
 		print(str(e))
 
 #find any one word from a string array in a string
-def findWord(words, string):
+def findWord(words, s):
 	for w in words:
-		if (' ' + w + ' ') in (' ' + string + ' '):
+		if (' ' + w + ' ') in (' ' + s.translate(str.maketrans('', '', string.punctuation)) + ' '):
 			return True
+
+#checks if current topic has more lines or not
+def topicContinues():
+	if getTopic(seq) == '\n':
+		return False
+	else:
+		return True
 
 #get a line by line number
 #def getLine(lineNumber):
@@ -93,24 +100,28 @@ def findWord(words, string):
 #		if str in line:
 #			return line
 
-#get a line by topic number
-def getTopic():
+#get a line by topic number (and sequence number if specified)
+def getTopic(sequence=2):
 	global topic
+
 	count = -1
 	convoFile.seek(0)
 	while True:
 		line = convoFile.readline()
 		if not line: break
-		if count == topic:
-			line = convoFile.readline()
-			return line
-		elif line == "\n":
+		if line == "\n":
 			count += 1
+		if count == topic:
+			for i in range(0, sequence):
+				line = convoFile.readline()
+			return line
 
+#prints the found response, dealing with placeholder values
 def printResponse(response):
 	global saveAnswer
 	global lastAnswer
 	global lastType
+	global seq
 
 	if '$' in response:
 		r = response.split(' ')
@@ -136,6 +147,7 @@ def printResponse(response):
 	if output[-1:] == '\n':
 		output = output[:-1]
 	print(output)
+	seq += 1
 
 #finds most appropriate topic from user input
 def findTopic(uIn):
@@ -169,25 +181,30 @@ def findTopic(uIn):
 
 	if maxMatches > 0:
 		topic = topMatch
-		printResponse(getTopic())
+		return getTopic()
 	else:
 		if uIn[-1:] == '?':
-			topic = 1
-			printResponse(getTopic())
+			if topicContinues():
+				return getTopic(seq)
+			else:
+				topic = 1
+				return getTopic()
 		else:
 			topic = 0
-			printResponse(getTopic())
+			return getTopic()
 
 #gets next response
 def getResponse(uIn=""):
+	global seq
 	if '?' in uIn:
-		findTopic(uIn)
+		printResponse(findTopic(uIn))
 	else:
 		line = convoFile.readline()
 		if line != "\n":
 			printResponse(line)
 		else:
-			findTopic(uIn)
+			printResponse(findTopic(uIn))
+	seq += 1
 
 # Start of conversation
 uIn = ""
