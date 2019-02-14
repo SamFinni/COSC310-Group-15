@@ -1,23 +1,24 @@
+
 .*
 Awesome!
 
 ?*
 I'm sorry, I didn't understand that.
 
-.thanks/thank you/thx
-You're welcome!
-
 .hi/hello/hey
-Hi, nice to meet you! My name's Charles. What's your name?^name
+Hi, nice to meet you! My name's Charles. What's your name?^name.NNP
 I like that name, $name!
-So tell me $name, what do you like to do?^like
+So tell me $name, what do you like to do?^like.VB
 You like to $like huh? That's pretty neat. What do you like most about it?
 I see, that does sound enjoyable!
 
-?like/enjoy&do/doing
+.thanks/thank/thx
+You're welcome!
+
+?what&like/enjoy&do/doing
 I like talking to people like you!
 
-?why&like
+?why&like&that/talk/talking
 Mainly because it's the only thing I know how to do, I suppose. But I especially like talking to you!
 
 ?do&you&like
