@@ -52,5 +52,15 @@ If the [+] operator is used, the next 3 lines MUST start with each one of +, -, 
 
 <h3>Potential Updates:</h3>
 1. Take context into account
+
 2. Create better correlation system
-3. Make bot able to give some suggested topics/questions to ask to the user.
+
+3. Make bot able to give some suggested topics/questions for the user to ask.
+
+4. Make certain words weighted heavier (why, what, etc) when choosing topics
+
+5. Use first character of topics (. or ?) to weight responses
+
+6. Create and link non-CLI UI
+
+7. Allow wildcards in topic keywords (eg, 'fav*' matches fave, favorite, and favourite)
