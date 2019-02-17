@@ -3,13 +3,13 @@
 
 This chatbot will initiate a conversation with the user, interacting with them like a friend. It will be able to understand the gist of what the user is saying, and (hopefully) respond in an appropriate way.
 
-Usage:
+<h3>Usage:</h3>
 
 All conversation topics are handled dynamically in [convo.dat]. The first line of a topic is structured as follows:
 
 <b>[. or ?][keywords]([^variable][.wordType] OR [+])</b>
 
-Explanation:
+<h3>Explanation:</h3>
 
 [. or ?]: Depending on whether the topic expects a statement (.) or question (?) from the user (although currently unused).
 
@@ -34,7 +34,7 @@ When using the [+] operator, the following 3 lines must start with + (positive),
 
 
 
-Restrictions:
+<h3>Restrictions:</h3>
 
 convo.dat file must begin with an empty line, and end with two empty lines.
 
@@ -47,3 +47,10 @@ Doesn't handle context well; user must explicitly mention what they're referring
 Can't both save an answer and determine the positivity of a single user response.
 
 If the [+] operator is used, the next 3 lines MUST start with each one of +, -, and 0.
+
+
+
+<h3>Potential Updates:</h3>
+1. Take context into account
+2. Create better correlation system
+3. Make bot able to give some suggested topics/questions to ask to the user.
