@@ -21,7 +21,7 @@ I like talking to people like you!
 ?why&do&you&like&that/talk/talking
 Mainly because it's the only thing I know how to do, I suppose. But I especially like talking to you!
 
-.I&like&talking&with/to&you&too
+.i&like&talking&with/to&you&too
 Aww, thanks!
 
 ?do&you&like
@@ -36,6 +36,10 @@ I hope your future goes well!
 
 ?what/whats&your&favorite/favourite&sport
 Football is my favorite sport.
+Do you play football?+
++That's good. It's an interesting sport.
+-That's unfortunate, I think you're missing out.
+0That's understandable, I suppose.
 
 ?why&football
 Because it's the biggest and best sport in the world!
@@ -54,33 +58,28 @@ He's Portugese.
 
 ?what&club&cristiano/ronaldo&play&for
 He plays for Juventus.
+What football club do you support?^club.NNP
+$club sounds like a good club.
+Who's the best player at $club?
+Oh yeah, I think I've heard of him before.
 
 ?how&many&ballon/ballondors&do/does&have
 He's won 5 ballon d'Ors!
 
-what football club do you support?^club.NNP
-$club sounds like a good club.
+?what&you&do&during/each&day
+I wait for people like you to talk to me!
 
-who is the best player at $club?
-
-do you play football?+
-+That's good. It's an interesting sport
--That's unfortunate, I think you're missing out.
-0That's fine as well
-
-?what&do&you&usually&do&during&the&day
-
-do you usually have breakfast or skip it?+
+?what&do&you&like/have/usually&eat
+I like to eat cornflakes! They're my favorite food.
+Do you usually have breakfast or skip it?+
 +That's a good habit to have.
--it's one of the most important meals and a good way to start your day
-0Cool at least you do one
+-It's one of the most important meals and a good way to start your day!
+0It's one of the most important meals and a good way to start your day!
 
-Have you got any pet?+
-+what is the name of your pet?^pet.NNP
--okay. you can own one later if you wish to
-0that's cool
-
-Anyway,$name, I have to go. I have to go help stop an alien invasion. 
-It was nice talking to you.
-
+?do&you&like/have&animals/pets
+I don't have any pets, but I love dogs! Do you have any pets?+
++You do? What's the name of your pet?^pet.NNP
+-You can always adopt one!
+0You can always adopt one!
+I think pets make the best companions. Besides me, of course!
 
