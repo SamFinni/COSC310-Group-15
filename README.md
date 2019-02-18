@@ -3,7 +3,7 @@
 
 This chatbot will initiate a conversation with the user, interacting with them like a friend. It will be able to understand the gist of what the user is saying, and (hopefully) respond in an appropriate way.
 
-<h3>Dependancies:</h3>
+<h3>Dependencies:</h3>
 The NLTK Python library must first be downloaded. Installation instructions can be found <a href="https://www.nltk.org/install.html">here.</a>
 
 The simplest way is to run `python -m pip install nltk`
@@ -21,7 +21,7 @@ nltk.download('averaged_perceptron_tagger')
 
 All conversation topics are handled dynamically in `convo.dat`. The first line of a topic is structured as follows:
 
-<b>`. or ?``keywords`(`^variable.wordType` OR `+`)</b>
+<b>`. or ?` `keywords` (`^variable.wordType` OR `+`)</b>
 
 <h3>Explanation:</h3>
 
