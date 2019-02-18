@@ -58,3 +58,26 @@ He plays for Juventus.
 ?how&many&ballon/ballondors&do/does&have
 He's won 5 ballon d'Ors!
 
+what football club do you support?^club.NNP
+$club sounds like a good club.
+
+who is the best player at $club?
+
+do you play football?+
++That's good. It's an interesting sport
+-That's unfortunate, I think you're missing out.
+
+?what&do&you&usually&do&during&the&day
+
+do you usually have breakfast or skip it?+
++That's a good habit to have.
+-it's one of the most important meals and a good way to start your day
+
+Have you got any pet?+
++what is the name of your pet?^pet.NNP
+-That's fine, you can own one later if you wish to
+
+Anyway,$name, I have to go. I have to go help stop an alien invasion. 
+It was nice talking to you.
+
+
