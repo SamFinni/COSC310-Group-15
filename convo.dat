@@ -66,18 +66,20 @@ who is the best player at $club?
 do you play football?+
 +That's good. It's an interesting sport
 -That's unfortunate, I think you're missing out.
+0That's fine as well
 
 ?what&do&you&usually&do&during&the&day
 
 do you usually have breakfast or skip it?+
 +That's a good habit to have.
 -it's one of the most important meals and a good way to start your day
+0Cool at least you do one
 
 Have you got any pet?+
 +what is the name of your pet?^pet.NNP
--That's fine, you can own one later if you wish to
+-okay. you can own one later if you wish to
+0that's cool
 
 Anyway,$name, I have to go. I have to go help stop an alien invasion. 
 It was nice talking to you.
-
 
